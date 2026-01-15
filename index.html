@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FreshHarvest</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="js/script.js"></script>
+</head>
+<body>
+
+<!-- NAVIGATION (SEPARATE FROM HERO) -->
+<header class="top-nav">
+    <div class="nav-left">
+        <a href="index.html">
+            <img src="images/logoA.png" class="nav-logo" alt="FreshHarvest Logo">
+        </a>
+    </div>
+
+    <nav class="nav-links">
+        <button class="nav-island" onclick="toggleDarkMode()">🌙</button>
+        <a href="about.html" class="nav-island">About</a>
+        <a href="contact.html" class="nav-island">Contact</a>
+        <a href="cart.html" class="nav-island cart-btn">
+            Cart 🛒 <span id="cart-count">0</span>
+        </a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+
+    <!-- PAGE DESCRIPTION ISLAND -->
+    <div class="hero-text island">
+        <h1>FreshHarvest Market</h1>
+        <p>
+            Discover locally sourced fruits and vegetables, harvested fresh from trusted farms
+            and offered at prices that make healthy living accessible.
+        </p>
+    </div>
+</section>
+
+<main class="content-grid">
+
+    <!-- MARKET TRACKER -->
+    <aside class="island tracker">
+        <h3>Nearest Market</h3>
+        <p id="market-name">Finding nearest market…</p>
+    </aside>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products-section island">
+
+        <!-- FILTER BUTTONS (ABOVE PRODUCTS) -->
+        <div class="filters">
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('fruit')">Fruits</button>
+            <button onclick="filterProducts('veg')">Vegetables</button>
+        </div>
+
+        <!-- PRODUCT LIST -->
+        <div class="products" id="products">
+
+            <!-- SAMPLE FRUIT -->
+            <div class="product-card fruit">
+                <img src="images/apple.jpg">
+                <h4>Red Apples</h4>
+                <p class="desc">Batangas • Harvested today</p>
+                <span>₱120 / kg</span>
+
+                <div class="qty">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <span>1</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button onclick="addToCart(this,'Red Apples',120)">Add to Cart</button>
+            </div>
+
+             <div class="product-card fruit">
+                <img src="images/durian.png">
+                <h4>Durian</h4>
+                <p class="desc">Davao • Harvested today</p>
+                <span>₱140 / kg</span>
+
+                <div class="qty">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <span>1</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button onclick="addToCart(this,'Durian',140)">Add to Cart</button>
+            </div>
+
+            <div class="product-card fruit">
+                <img src="images/strawberry.png">
+                <h4>Strawberry</h4>
+                <p class="desc">Baguio • Harvested today</p>
+                <span>₱30 / kg</span>
+
+                <div class="qty">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <span>1</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button onclick="addToCart(this,'Strawberry',30)">Add to Cart</button>
+            </div>
+
+            <!-- SAMPLE VEGETABLE -->
+            <div class="product-card veg">
+                <img src="images/carrot.png">
+                <h4>Carrots</h4>
+                <p class="desc">Benguet • Picked this morning</p>
+                <span>₱90 / kg</span>
+
+                <div class="qty">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <span>1</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button onclick="addToCart(this,'Carrots',90)">Add to Cart</button>
+            </div>
+            
+             <div class="product-card veg">
+                <img src="images/cabbage.png">
+                <h4>Cabbage</h4>
+                <p class="desc">Cebu • Picked this morning</p>
+                <span>₱45 / kg</span>
+
+                <div class="qty">
+                    <button onclick="changeQty(this,-1)">−</button>
+                    <span>1</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+
+                <button onclick="addToCart(this,'Cabbage',45)">Add to Cart</button>
+            </div>
+
+
+        </div>
+    </section>
+
+</main>
+    
+<footer>
+    <p>© 2026 JDN FreshHarvest</p>
+</footer>
+    
+</body>
+</html>

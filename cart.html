@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Cart – FreshHarvest</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/script.js"></script>
+</head>
+<body onload="loadCart()">
+
+<header class="top-nav">
+    <div class="nav-left">
+        <a href="index.html">
+            <img src="images/logoA.png" class="nav-logo">
+        </a>
+    </div>
+    <nav class="nav-links">
+        <button class="nav-island" onclick="toggleDarkMode()">🌙</button>
+        <a href="about.html" class="nav-island">About</a>
+        <a href="contact.html" class="nav-island">Contact</a>
+    </nav>
+</header>
+
+<section class="island cart-page" style="max-width:600px; margin:4rem auto;">
+    <h2>Your Shopping Cart</h2>
+<ul id="cart-items"></ul>
+
+<p id="total"></p>
+
+<div class="cart-actions">
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="openModal()">Checkout</button>
+</div>
+
+</section>
+<footer>
+    <p>© 2026 JDN FreshHarvest</p>
+</footer>
+</body>
+</html>
